@@ -42,6 +42,7 @@ class CRM_CiviDiscount_BAO_Item extends CRM_CiviDiscount_DAO_Item {
     }
 
     $item->is_active = CRM_Utils_Array::value('is_active', $params) ? 1 : 0;
+    $item->is_visible = CRM_Utils_Array::value('is_visible', $params) ? 1 : 0;
     $item->discount_msg_enabled = CRM_Utils_Array::value('discount_msg_enabled', $params) ? 1 : 0;
 
     if (!empty($params['active_on'])) {
@@ -120,6 +121,7 @@ class CRM_CiviDiscount_BAO_Item extends CRM_CiviDiscount_DAO_Item {
     expire_on,
     active_on,
     is_active,
+    is_visible,
     discount_msg_enabled,
     discount_msg,
     count_use,

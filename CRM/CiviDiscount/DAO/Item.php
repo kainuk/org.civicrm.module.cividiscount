@@ -177,6 +177,12 @@ class CRM_CiviDiscount_DAO_Item extends CRM_Core_DAO {
    *
    * @var boolean
    */
+  public $is_visible;
+  /**
+   * Show the enter discount code on a payment page.
+   *
+   * @var boolean
+   */
   public $discount_msg_enabled;
   /**
    * Discount message.
@@ -314,6 +320,10 @@ class CRM_CiviDiscount_DAO_Item extends CRM_Core_DAO {
         ],
         'is_active' => [
           'name' => 'is_active',
+          'type' => CRM_Utils_Type::T_BOOLEAN,
+        ],
+        'is_visible' => [
+          'name' => 'is_visible',
           'type' => CRM_Utils_Type::T_BOOLEAN,
         ],
         'discount_msg_enabled' => [

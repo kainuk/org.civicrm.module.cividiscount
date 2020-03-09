@@ -126,4 +126,10 @@
        <comment>What filters apply to this discount (json array)</comment>
        <add>2.6</add>
   </field>
+  <field>
+    <name>is_visible</name>
+    <type>boolean</type>
+    <comment>Is this the account code field shown?</comment>
+    <add>5.8</add>
+  </field>
 </table>

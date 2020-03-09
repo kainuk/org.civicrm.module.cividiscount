@@ -73,6 +73,10 @@
         <td>&nbsp;</td>
         <td>{$form.is_active.html} {$form.is_active.label}</td>
       </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>{$form.is_visible.html} {$form.is_visible.label}</td>
+      </tr>
       <tr class="crm-discount-item-form-block-amount">
         <td class="label">{$form.amount.label}</td>
         <td>{$form.amount.html|crmReplace:class:'crm-form-text six'} {$form.amount_type.html}

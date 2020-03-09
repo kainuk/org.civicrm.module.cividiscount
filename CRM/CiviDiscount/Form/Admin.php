@@ -77,6 +77,7 @@ class CRM_CiviDiscount_Form_Admin extends CRM_Admin_Form {
       CRM_CiviDiscount_BAO_Item::retrieve($params, $defaults);
     }
     $defaults['is_active'] = $origID ? CRM_Utils_Array::value('is_active', $defaults) : 1;
+    $defaults['is_visible'] = $origID ? CRM_Utils_Array::value('is_visible', $defaults) : 1;
     $defaults['autodiscount_active_only'] = $origID ? CRM_Utils_Array::value('autodiscount_active_only', $defaults) : 1;
     $defaults['discount_msg_enabled'] = $origID ? CRM_Utils_Array::value('discount_msg_enabled', $defaults) : 0;
     $defaults['count_max'] = empty($defaults['count_max']) ? '' : $defaults['count_max'];
@@ -158,6 +159,8 @@ class CRM_CiviDiscount_Form_Admin extends CRM_Admin_Form {
 
     // is this discount active ?
     $this->addElement('checkbox', 'is_active', E::ts('Is this discount active?'));
+    // is this discount active ?
+    $this->addElement('checkbox', 'is_visible', E::ts('Is the enter discount field visible?'));
 
     $this->addElement('checkbox', 'discount_msg_enabled', E::ts('Display a message to users not eligible for this discount?'));
     $this->add('textarea', 'discount_msg', E::ts('Message to non-eligible users'), ['class' => 'big']);

@@ -108,6 +108,10 @@
       <td class="label">{ts}Enabled?{/ts}</td>
       <td>{if $is_active eq 1} {ts}Yes{/ts} {else} {ts}No{/ts} {/if}</td>
     </tr>
+    <tr>
+      <td class="label">{ts}Visible?{/ts}</td>
+      <td>{if $is_visible eq 1} {ts}Yes{/ts} {else} {ts}No{/ts} {/if}</td>
+    </tr>
 
     {foreach from=$note item="rec"}
       {if $rec }

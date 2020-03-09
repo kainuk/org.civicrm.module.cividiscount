@@ -117,7 +117,11 @@ class CRM_CiviDiscount_DiscountCalculator {
       return FALSE;
     }
     if (!empty($this->entity_discounts)) {
-      return TRUE;
+      foreach($this->entity_discounts as $entity_discount) {
+        if($entity_discount['is_visible']) {
+          return TRUE;
+        }
+      }
     }
     return FALSE;
   }
